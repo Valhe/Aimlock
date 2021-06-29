@@ -7,7 +7,7 @@ getgenv().PredictionVelocity = 5 -- The speed of the PredictMovement feature
 
 getgenv().FuckHoodUniversalAimbotLoadingTime = tick()
 if FuckHoodUniversalAimbotLoaded == true then
-    Notify("ValheAimlockConfigto170ms", "Script Loaded Already", "", 3)
+    Notify("Valhe#1111", "", "", 3)
     return 
 end
 
@@ -115,7 +115,7 @@ end
         if getgenv().TeamCheck == true then
             if #workspace.Teams:GetChildren() == 0 then 
                 getgenv().TeamCheck = false 
-                SeparateNotify("ValheConfigAimlockto170ms", "TeamCheck set to: "..tostring(getgenv().TeamCheck).." because there are no teams!", "", 3)
+                SeparateNotify("Valhe#1111", "", "", 3)
             end
         end
     end
@@ -161,13 +161,13 @@ Uis.InputBegan:Connect(function(Key)
                 local Target;Target = GetNearestTarget()
                 if Target ~= nil then 
                     AimlockTarget = Target
-                    Notify("ValheConfigAimlockto170ms", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
+                    Notify("Valhe#1111", "Aimlockeas a: "..tostring(AimlockTarget), "", 3)
                 end
             end)
         end
         if Key.KeyCode == Enum.KeyCode[AimlockToggleKey] then 
             Aimlock = not Aimlock
-            Notify("ValheAimlockConfigTo170ms", "Aimlock: "..tostring(Aimlock), "", 3)
+            Notify("Valhe#1111", "Aimlock: "..tostring(Aimlock), "", 3)
         end
     end
 end)
@@ -199,4 +199,4 @@ CanNotify = true
     end
 end)
 
-SeparateNotify("ValheConfigAimlockto170ms", "Universal Aimbot loaded in: "..string.format("%.7f", tostring(tick() - FuckHoodUniversalAimbotLoadingTime)), "", 3)
+SeparateNotify("Valhe#1111", ""..string.format("%.7f", tostring(tick() - FuckHoodUniversalAimbotLoadingTime)), "", 3)
