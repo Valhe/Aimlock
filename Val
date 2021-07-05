@@ -3,7 +3,7 @@ getgenv().AimlockToggleKey = "Y" -- Toggles Aimbot On/Off
 getgenv().AimRadius = 50 -- How far away from someones character you want to lock on at
 getgenv().TeamCheck = false -- Check if Target is on your Team (True means it wont lock onto your teamates, false is vice versa) (Set it to false if there are no teams)
 getgenv().PredictMovement = true -- Predicts if they are moving in fast velocity (like jumping) so the aimbot will go a bit faster to match their speed 
-getgenv().PredictionVelocity = 5 -- The speed of the PredictMovement feature 
+getgenv().PredictionVelocity = 4 -- The speed of the PredictMovement feature 
 
 getgenv().FuckHoodUniversalAimbotLoadingTime = tick()
 if FuckHoodUniversalAimbotLoaded == true then
@@ -17,26 +17,6 @@ local Aimlock, MousePressed, CanNotify = true, false, false;
 local AimlockTarget;
 getgenv().FuckHoodUniversalAimbotLoaded = true
 
-getgenv().SeparateNotify = function(title, text, icon, time) 
-    SGui:SetCore("SendNotification",{
-        Title = title;
-        Text = text;
-        Icon = "";
-        Duration = time;
-    })
-end
-
-getgenv().Notify = function(title, text, icon, time)
-    if CanNotify == true then 
-        if not time or not type(time) == "number" then time = 3 end
-        SGui:SetCore("SendNotification",{
-            Title = title;
-            Text = text;
-            Icon = "";
-            Duration = time;
-        }) 
-    end
-end
 getgenv().ThirdPerson = true -- Locking onto someone in your Third Person POV
 getgenv().FirstPerson = true 
 getgenv().WorldToViewportPoint = function(P)
